@@ -1,5 +1,5 @@
 streamlit
-streamlit_extras.stylable_container
+streamlit_extras
 streamlit_pdf_viewer
 google.generativeai
 os
@@ -7,4 +7,4 @@ textwra
 pandas
 numpy
 langchain_text_splitters
-langchain_community.document_loaders
+langchain_community
