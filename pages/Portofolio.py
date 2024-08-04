@@ -32,7 +32,7 @@ with body:
          """
          ]
       ):
-         pdf_viewer("assets/Bank Term Deposition Subscription Prediction.pdf",width=700,height=400)
+         pdf_viewer("assets/Bank Term Deposition Subscription Prediction.pdf",width=750,height=400)
 
    st.write("")
    st.subheader(":blue[2. House Prices Prediction - Regression Model Demo:]", divider='grey')
@@ -71,7 +71,7 @@ with body:
                   - [Github](https://github.com/Ren1990/genai_job_candidate_agent) 
                   """)
    with col2:
-      components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=700, height=400)
+      components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=750, height=400)
    
    st.write("")
    st.subheader(":blue[4. Tableau: 2024 Investment Portfolio:]", divider='grey')
