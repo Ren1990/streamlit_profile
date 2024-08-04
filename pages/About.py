@@ -9,22 +9,10 @@ with body:
     st.header("👨‍🚀 About",divider='rainbow')
     st.write("")
     colA,  colB = st.columns([2.5,3])
-    with st.container():
-        with colA:
-            st.image("assets/image1.jpg", width=600)
-            st.write('Hi! This is me, Ren Hwai, chilling in Iceland. Happy family trip during my career break!')
-            st.write('After working in top US semicond company for 8 years as Sr. Business Analyst and Process Development Engineer, I took a break to sharpen my Python skill in data science & analysis, and study for CFA (Chartered Finance Analyst) to look for new industry exposure and work opportunity.')
-            st.markdown(f"##### ✉️  Email: kongrenhwai@hotmail.com")
-        col1, col2 = st.columns([0.1, 3])
-        with col1:
-            st.write(linkedin_logo, unsafe_allow_html=True)
-        with col2:
-            st.markdown(f"##### Linkedin: {'https://www.linkedin.com/in/renhwai-kong/'}")
-        col1, col2 = st.columns([0.1, 3])
-        with col1:
-            st.write(github_logo, unsafe_allow_html=True)
-        with col2:
-            st.markdown(f"##### Github: {'https://github.com/Ren1990?tab=repositories'}")
+    with colA:
+        st.image("assets/image1.jpg", width=600)
+        st.write('Hi! This is me, Ren Hwai, chilling in Iceland. Happy family trip during my career break!')
+        st.write('After working in top US semicond company for 8 years as Sr. Business Analyst and Process Development Engineer, I took a break to sharpen my Python skill in data science & analysis, and study for CFA (Chartered Finance Analyst) to look for new industry exposure and work opportunity.')
     with colB:
         st.subheader(':blue[Business Analyst]')
         st.markdown('##### **Gap Analysis | Leadership Reporting | Stakeholder Influencing | Resource Planning | Data-Driven Decision Making | Agile | Scrum | JIRA | Confluence**')
@@ -34,6 +22,17 @@ with body:
         st.markdown('##### **Problem Solving | Risk Management & Planning | New Product Introduction | Technology Development | Process Control | DOE | FMEA | JMP**')
         st.subheader(':blue[Finance Knowledge]')
         st.markdown('##### **Finance Statement | Discounted Cash Flow Valuation | Residual Income Valuation | Equity Research | Economy | Stock | Fixed Income | Future | Option**')
-    
+                
+    st.markdown(f"##### ✉️  Email: kongrenhwai@hotmail.com")
+    col1, col2 = st.columns([0.1, 3])
+    with col1:
+        st.write(linkedin_logo, unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"##### Linkedin: {'https://www.linkedin.com/in/renhwai-kong/'}")
+    col1, col2 = st.columns([0.1, 3])
+    with col1:
+        st.write(github_logo, unsafe_allow_html=True)
+    with col2:
+        st.markdown(f"##### Github: {'https://github.com/Ren1990?tab=repositories'}")
     
     
