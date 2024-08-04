@@ -27,7 +27,7 @@ with body:
          css_styles=[
             """
          {
-            border: 1px solid #000080;
+            border: 1px solid #4682B4;
          }
          """
          ]
@@ -52,7 +52,7 @@ with body:
          css_styles=[
             """
          {
-            border: 1px solid #000080;
+            border: 1px solid #4682B4;
          }
          """
          ]
@@ -76,7 +76,7 @@ with body:
          css_styles=[
             """
          {
-            border: 1px solid #000080;
+            border: 1px solid #4682B4;
          }
          """
          ]
