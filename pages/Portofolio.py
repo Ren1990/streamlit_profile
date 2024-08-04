@@ -71,7 +71,17 @@ with body:
                   - [Github](https://github.com/Ren1990/genai_job_candidate_agent) 
                   """)
    with col2:
-      components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=750, height=400)
+      with stylable_container(
+         key='port1',
+         css_styles=[
+            """
+         {
+            border: 2px solid #CCCCCC;
+         }
+         """
+         ]
+      ):
+         components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=750, height=400)
    
    st.write("")
    st.subheader(":blue[4. Tableau: 2024 Investment Portfolio:]", divider='grey')
