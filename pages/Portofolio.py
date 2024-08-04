@@ -81,7 +81,7 @@ with body:
          """
          ]
       ):
-         components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=700, height=400)
+         components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=740, height=400)
    
    st.write("")
    st.subheader(":blue[4. Tableau: 2024 Investment Portfolio:]", divider='grey')
