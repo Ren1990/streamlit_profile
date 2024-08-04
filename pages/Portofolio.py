@@ -10,7 +10,7 @@ with body:
    menu()
    st.header("👨‍💻 Portfolio")
    st.write("")
-   st.subheader(":blue[1. Bank Customer Subscription Prediction - Binary Classification Model Demo:]", divider='grey')
+   st.subheader(":blue[1. Bank Customer Subscription Prediction - Binary Classification Model Demo]", divider='grey')
    col1,  col2 = st.columns([3,2.6])
    with col1:
       st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | Cross Validation | Optuna | Matplot | Plotly")
@@ -35,7 +35,7 @@ with body:
          pdf_viewer("assets/Bank Term Deposition Subscription Prediction.pdf",width=750,height=400)
 
    st.write("")
-   st.subheader(":blue[2. House Prices Prediction - Regression Model Demo:]", divider='grey')
+   st.subheader(":blue[2. House Prices Prediction - Regression Model Demo]", divider='grey')
    col1,  col2 = st.columns([3,2.6])
    with col1:
       st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | GradientBoost | Time-Based Cross Validation | Optuna | Matplot | Plotly ")
@@ -60,7 +60,7 @@ with body:
          pdf_viewer("assets/House Price Prediction Modeling.pdf",width=750,height=400)
 
    st.write("")
-   st.subheader(":blue[3. GenAI: Digital Twin Job Interviewee Agent Hosted by Streamlit:]", divider='grey')
+   st.subheader(":blue[3. GenAI: Digital Twin Job Interviewee Agent Hosted by Streamlit]", divider='grey')
    col1,  col2 = st.columns([3,2.6])
    with col1:
       st.markdown("##### LLM | RAG | Prompt Engineering | Streamlit | Python")
@@ -84,7 +84,7 @@ with body:
          components.iframe("https://renhwaichatbot.streamlit.app/~/+/", width=740, height=400)
    
    st.write("")
-   st.subheader(":blue[4. Tableau: 2024 Investment Portfolio:]", divider='grey')
+   st.subheader(":blue[4. Tableau: 2024 Investment Portfolio]", divider='grey')
    col1,  col2 = st.columns([3,2.3])
    with col1:
       st.markdown("##### Tableau | Data Storytelling | Interactive Visualization | Investment")
