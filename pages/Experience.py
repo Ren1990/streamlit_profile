@@ -10,7 +10,7 @@ with body:
     st.write("")
     col1,  col2 = st.columns([3,2])
     with col1:
-        st.subheader(":blue[Sr. Business Analyst | Micron Semiconductor Asia]")
+        st.subheader(":blue[Sr. Business Analyst | Micron Semiconductor Asia]", divider='grey')
     with col2:
         st.subheader("2022 Mar - 2024 Jan")
     st.markdown("##### **AI Transformation | Stakeholder Management | Visualization | GenAI | Snowflake | Bigquery | Agile**")
@@ -33,7 +33,7 @@ with body:
     st.write("")
     col1,  col2 = st.columns([3,2])
     with col1:
-        st.subheader(":blue[Sr. Process Engineer | Micron Semiconductor Asia]")
+        st.subheader(":blue[Sr. Process Engineer | Micron Semiconductor Asia]", divider='grey')
     with col2:
         st.subheader("2015 July - 2022 March")
     st.markdown("##### **Root Cause Analysis | Problem Solving | Risk Management | Design of Experiment | Data Mining**")
