@@ -52,7 +52,7 @@ with body:
          css_styles=[
             """
          {
-            border: 1px linear-gradient(in hsl longer hue 45deg, red 0 0);
+            border: 1px solid #4682B4);
          }
          """
          ]
