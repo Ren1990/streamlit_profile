@@ -4,3 +4,4 @@ streamlit_pdf_viewer
 google.generativeai
 langchain_text_splitters
 langchain_community
+bump-my-version
