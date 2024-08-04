@@ -9,7 +9,7 @@ with body:
     st.header("🤖 GenAI Agent",divider='rainbow')     
     job_summary=''
     job_description=st.text_area(
-        label="🤖: 'I am a Digital Twin of Ren Hwai, and I am ready for job interview.'",
+        label="🤖: 'I am a Digital Twin of Ren Hwai, and I am ready for job interview!'",
         placeholder ="You can paste a job description here, or skip to the bottom to ask question.",
         height=250,
         )
