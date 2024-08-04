@@ -32,7 +32,7 @@ with body:
          """
          ]
       ):
-         pdf_viewer("assets\A.pdf",width=700,height=400)
+         pdf_viewer("assets/A.pdf",width=700,height=400)
 
    st.write("")
    st.subheader(":blue[2. House Prices Prediction - Regression Model Demo:]", divider='grey')
