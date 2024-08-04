@@ -2,7 +2,7 @@ streamlit
 streamlit_extras
 streamlit_pdf_viewer
 google.generativeai
-textwra
+textwrap
 pandas
 numpy
 langchain_text_splitters
