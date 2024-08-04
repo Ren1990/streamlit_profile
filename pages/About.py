@@ -17,7 +17,7 @@ with body:
             st.markdown(f"##### ✉️  Email: kongrenhwai@hotmail.com")
         col1, col2 = st.columns([0.1, 3])
         with col1:
-            st.write(linkedin_logo, unsafe_allow_html=True)
+            st.write(linkedin_logo+st.markdown(f"##### Linkedin: {'https://www.linkedin.com/in/renhwai-kong/'}"), unsafe_allow_html=True)
         with col2:
             st.markdown(f"##### Linkedin: {'https://www.linkedin.com/in/renhwai-kong/'}")
         col1, col2 = st.columns([0.1, 3])
