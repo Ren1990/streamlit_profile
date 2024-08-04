@@ -11,7 +11,7 @@ with body:
    st.header("👨‍💻 Portfolio")
    st.write("")
    st.subheader(":blue[1. Bank Customer Subscription Prediction - Binary Classification Model Demo:]", divider='grey')
-   col1,  col2 = st.columns([3,2.3])
+   col1,  col2 = st.columns([3,2.4])
    with col1:
       st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | Cross Validation | Optuna | Matplot | Plotly")
       st.markdown("""
@@ -36,7 +36,7 @@ with body:
 
    st.write("")
    st.subheader(":blue[2. House Prices Prediction - Regression Model Demo:]", divider='grey')
-   col1,  col2 = st.columns([3,2.3])
+   col1,  col2 = st.columns([3,2.4])
    with col1:
       st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | GradientBoost | Time-Based Cross Validation | Optuna | Matplot | Plotly ")
       st.markdown("""
@@ -61,7 +61,7 @@ with body:
 
    st.write("")
    st.subheader(":blue[3. GenAI: Digital Twin Job Interviewee Agent Hosted by Streamlit:]", divider='grey')
-   col1,  col2 = st.columns([3,2.3])
+   col1,  col2 = st.columns([3,2.4])
    with col1:
       st.markdown("##### LLM | RAG | Prompt Engineering | Streamlit | Python")
       st.markdown("""
