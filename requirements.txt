@@ -2,7 +2,6 @@ streamlit
 streamlit_extras
 streamlit_pdf_viewer
 google.generativeai
-os
 textwra
 pandas
 numpy
