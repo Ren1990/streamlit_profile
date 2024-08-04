@@ -32,7 +32,7 @@ with body:
          """
          ]
       ):
-         pdf_viewer("assets/Bank Term Deposition Subscription Prediction.pdf",width=720,height=400)
+         pdf_viewer("assets/Bank Term Deposition Subscription Prediction.pdf",width=750,height=400)
 
    st.write("")
    st.subheader(":blue[2. House Prices Prediction - Regression Model Demo:]", divider='grey')
@@ -57,7 +57,7 @@ with body:
          """
          ]
       ):
-         pdf_viewer("assets/House Price Prediction Modeling.pdf",width=720,height=400)
+         pdf_viewer("assets/House Price Prediction Modeling.pdf",width=750,height=400)
 
    st.write("")
    st.subheader(":blue[3. GenAI: Digital Twin Job Interviewee Agent Hosted by Streamlit:]", divider='grey')
