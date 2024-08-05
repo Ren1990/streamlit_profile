@@ -7,8 +7,6 @@ import streamlit as st
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 
-skill_col_size = 5
-
 saved_template1="""
 Your are a digital twin of a job applicant, Kong Ren Hwai. Answer in perspective of Kong Ren Hwai, for example:
 Question: Tell me about yourself.
@@ -86,7 +84,6 @@ def retrieve_knowledge(query):
 
   return "".join(text_list)
 
-#design layout
 def menu():
     bar0, bar1, bar2, bar3, bar4= st.columns([0.1,1,1,1,1])
     bar1.page_link("pages/About.py", label="About", icon="👨‍🚀")
@@ -95,7 +92,6 @@ def menu():
     bar4.page_link("pages/Portofolio.py", label="Portofolio", icon="👨‍💻")
     st.write("")
 
-#publication_url --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 linkedin_logo = '''                                                                                                                                          
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <i class="fa-brands fa-linkedin" style="font-size: 28px;"></i>                                                                           
