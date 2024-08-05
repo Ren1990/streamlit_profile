@@ -29,7 +29,7 @@ with body:
                 - **Objective:**  Enhanced workforce productivity by optimizing internal data search capabilities with enhanced security to prevent sensitive data leak.
                 - **Achievements:** Established robust ETL (Extract, Transform, Load) pipelines and RAG (Retrieval Augmented Generation) frameworks for efficient data retrieval and summarization.  Significantly improved decision-making processes across departments by eliminating traditional information-gathering delays.
                 """)
-    st.link_button("Read the blog", "https://sg.micron.com/about/blog/applications/ai/generative-ai-wave-of-innovation]")
+    st.link_button("Read the blog", "https://sg.micron.com/about/blog/applications/ai/generative-ai-wave-of-innovation")
     st.write("")
     col1,  col2 = st.columns([3,2])
     with col1:
