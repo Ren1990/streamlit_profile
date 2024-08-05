@@ -13,7 +13,7 @@ with body:
    st.subheader(":blue[1. Bank Customer Subscription Prediction - Binary Classification Model Demo]", divider='grey')
    col1,  col2 = st.columns([3,2.6])
    with col1:
-      st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | Cross Validation | Optuna | Matplot | Plotly")
+      st.markdown("##### Machine Learning | Data Cleaning | Analysis | Visualization | Python | Scikit | XGBoost | Cross Validation | Optuna | Matplot | Plotly")
       st.markdown("""
                   - **Objective:** Developed a binary classification model using an open Kaggle dataset to predict whether a bank customer would subscribe to a term deposit during a marketing campaign.
                   - **Challenge:** Addressed data imbalance with only 11% successful subscriptions by choosing balanced accuracy as the performance metric.
@@ -38,7 +38,7 @@ with body:
    st.subheader(":blue[2. House Prices Prediction - Regression Model Demo]", divider='grey')
    col1,  col2 = st.columns([3,2.6])
    with col1:
-      st.markdown("##### Machine Learning | Data Cleaning| Analysis | Visualization | Python | Scikit | XGBoost | GradientBoost | Time-Based Cross Validation | Optuna | Matplot | Plotly ")
+      st.markdown("##### Machine Learning | Data Cleaning | Analysis | Visualization | Python | Scikit | XGBoost | GradientBoost | Time-Based Cross Validation | Optuna | Matplot | Plotly")
       st.markdown("""
                   - **Objective:** Built a regression model using an open Kaggle dataset to predict house prices in the US. RMSE is chosen as the model performance metric to prioritize in reducing prediction error.
                   - **Challenge:** Set RMSE target to be less than 30% of the standard deviation (\$23,833) based on the mean sale price (\$180,921) and standard deviation (\$79,442).
