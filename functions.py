@@ -39,7 +39,7 @@ JOB DESCRIPTION: {job_summary}
   return prompt
 
 def gemini_chat(full_prompt):
-    model = genai.GenerativeModel('gemini-2.0-flash-latest')
+    model = genai.GenerativeModel('gemini-2.0-flash')
     answer = model.generate_content(full_prompt)
     for chunk in answer.text:
         yield chunk
