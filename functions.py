@@ -39,7 +39,7 @@ JOB DESCRIPTION: {job_summary}
   return prompt
 
 def gemini_chat(full_prompt):
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('gemini-2.0-flash-latest')
     answer = model.generate_content(full_prompt)
     for chunk in answer.text:
         yield chunk
@@ -50,7 +50,7 @@ def update_job_summary(job_description):
     Briefly describe below job description into job position name, company name, job responsibilities and job requirements.
     This is job description: {job_description}
     """).format(job_description=job_description)
-    job_model = genai.GenerativeModel('gemini-1.0-pro')
+    job_model = genai.GenerativeModel('gemini-1.5-flash-latest')
     job_summary= job_model.generate_content(prompt)
     return job_summary.text    
 
