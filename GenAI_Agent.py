@@ -45,7 +45,7 @@ if prompt := st.chat_input("Ask me some interview questions..."):
     passage=retrieve_knowledge(prompt)
 
     with st.chat_message("assistant",avatar="🤖"):
-        response=st.write_stream(gemini_chat(make_prompt(prompt, job_summary, passage)))
+        response=st.write_stream(passage+"\n"+gemini_chat(make_prompt(prompt, job_summary, passage)))
         st.session_state.messages.append(
-            {"role": "assistant", "content":passage+"\n"+response})
+            {"role": "assistant", "content":response})
        
