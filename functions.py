@@ -1,4 +1,5 @@
 import google.generativeai as genai
+client = genai.Client()
 import os
 import textwrap
 import pandas as pd
@@ -39,8 +40,12 @@ JOB DESCRIPTION: {job_summary}
   return prompt
 
 def gemini_chat(full_prompt):
-    model = genai.GenerativeModel('gemini-2.5-flash')
-    answer = model.generate_content(full_prompt)
+    # model = genai.GenerativeModel('gemini-2.5-flash')
+    # answer = model.generate_content(full_prompt)
+    answer = client.models.generate_content(
+        model='gemini-2.5-flash',
+        content = full_prompt,
+        )
     for chunk in answer.text:
         yield chunk
 
@@ -50,8 +55,10 @@ def update_job_summary(job_description):
     Briefly describe below job description into job position name, company name, job responsibilities and job requirements.
     This is job description: {job_description}
     """).format(job_description=job_description)
-    job_model = genai.GenerativeModel('gemini-2.5-flash-lite')
-    job_summary= job_model.generate_content(prompt)
+    job_summary = client.models.generate_content(
+        model = 'gemini-2.5-flash-lite',
+        content = prompt,
+        )
     return job_summary.text    
 
 def update_knowledge():
