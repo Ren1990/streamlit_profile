@@ -1,4 +1,4 @@
-import google.generativeai as genai
+from google import genai
 client = genai.Client()
 import os
 import textwrap
