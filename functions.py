@@ -50,7 +50,7 @@ def update_job_summary(job_description):
     Briefly describe below job description into job position name, company name, job responsibilities and job requirements.
     This is job description: {job_description}
     """).format(job_description=job_description)
-    job_model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    job_model = genai.GenerativeModel('gemini-2.5-flash-lite')
     job_summary= job_model.generate_content(prompt)
     return job_summary.text    
 
