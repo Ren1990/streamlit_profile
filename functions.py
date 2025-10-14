@@ -1,5 +1,6 @@
 from google import genai
 client = genai.Client()
+from google.genai import types
 import os
 import textwrap
 import pandas as pd
@@ -40,14 +41,13 @@ JOB DESCRIPTION: {job_summary}
   return prompt
 
 def gemini_chat(full_prompt):
-    # model = genai.GenerativeModel('gemini-2.5-flash')
-    # answer = model.generate_content(full_prompt)
-    answer = client.models.generate_content(
-        model='gemini-2.5-flash',
-        content = full_prompt,
+    answer = client.models.generate_content_stream(
+        model = 'gemini-2.5-flash',
+        contents = full_prompt,
         )
-    for chunk in answer.text:
-        yield chunk
+    for chunk in answer:
+        if chunk.text:
+            yield chunk.text
 
 
 def update_job_summary(job_description):
@@ -57,7 +57,7 @@ def update_job_summary(job_description):
     """).format(job_description=job_description)
     job_summary = client.models.generate_content(
         model = 'gemini-2.5-flash-lite',
-        content = prompt,
+        contents = prompt,
         )
     return job_summary.text    
 
@@ -66,29 +66,43 @@ def update_knowledge():
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
     table=pd.DataFrame(columns=['document', 'content','embedding','relevant score'])
     i=0
+    
     for doc in os.listdir(docdir):
+        print(i)
         docsplit=TextLoader(docdir+doc,encoding='utf8').load_and_split(text_splitter)
         for chunk in docsplit:
-            embedding = genai.embed_content(model='models/text-embedding-004',content=chunk.page_content,task_type="retrieval_query")
-            table.loc[i]=[chunk.metadata['source'],chunk.page_content,embedding['embedding'],0]
-            i=i+1
+            result = client.models.embed_content(
+                model="gemini-embedding-001",
+                contents=chunk.page_content,  # Use page_content instead of chunk
+                config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
+            ).embeddings
+
+            embedding = np.array(result[0].values)
+
+            table.loc[i] = [chunk.metadata['source'], chunk.page_content, embedding, 0]
+            i = i + 1
     return table
 
 def retrieve_knowledge(query):
-  rank_threshold=0.5
-  ranking=10
-  readparquet=pd.read_parquet('embbed_table.parquet.gzip')
-  query_embedding = genai.embed_content(model='models/text-embedding-004',
-                                        content=query,
-                                        task_type="retrieval_query")
-  readparquet['relevant score'] = np.dot(np.stack(readparquet['embedding']), query_embedding["embedding"])
-  relevant_knowledge=readparquet.loc[(readparquet['relevant score']>rank_threshold)].sort_values('relevant score',ascending=False).head(ranking)
+  rank_threshold=0.6
+  ranking=3
+  readparquet=pd.read_parquet('embbed_table2.parquet.gzip')
+  
+  query_embedding = [
+     np.array(e.values) for e in client.models.embed_content(
+        model="gemini-embedding-001",
+        contents=query,
+        config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")).embeddings
+  ]
+  embeddings_matrix = np.array(query_embedding)
+
+  readparquet['relevant score'] = np.dot(np.stack(readparquet['embedding']), embeddings_matrix[0])
+  relevant_knowledge = readparquet.loc[(readparquet['relevant score']>rank_threshold)].sort_values('relevant score',ascending=False).head(ranking)
   text_list=[]
   i=1
   for t in relevant_knowledge['content'].apply(lambda x: x.replace("\ufeff", "")):
     text_list.append("KNOWLEDGE "+str(i)+": "+t+" ")
     i=i+1
-
   return "".join(text_list)
 
 def menu():

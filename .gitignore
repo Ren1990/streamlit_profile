@@ -1,0 +1,5 @@
+# Ignore Python cache directories and files
+**/__pycache__/
+*.py[cod]
+.env
+notebook.ipynb

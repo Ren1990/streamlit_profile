@@ -1,0 +1,9 @@
+The core purpose was to replace our siloed data environment—spanning SAP, MES, and in-house apps—with a modern architecture ready for Agentic AI and Machine Learning.
+
+I designed a Delta Lakehouse built on Azure and Databricks. The design covered the full lifecycle:
+
+Architecture: Implementing a multi-layered (Bronze, Silver, Gold) Lakehouse on ADLS for performance and governance.
+
+Pipelines & Integration: Designing the Databricks ETL/ELT pipelines to ingest and unify key data streams from SAP HANA and the MES, establishing cross-system data linkage.
+
+Governance & Cost: Defining the framework for Metadata Management and using Unity Catalog for granular security (RBAC). A key part was ensuring cost optimization and preparing a strategic migration path to AWS for cloud flexibility.
