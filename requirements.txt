@@ -1,7 +1,7 @@
 streamlit
 streamlit_extras
 streamlit_pdf_viewer
-google.generativeai
+google-genai
 langchain_text_splitters
 langchain_community
 bump-my-version
