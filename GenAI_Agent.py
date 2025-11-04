@@ -19,7 +19,7 @@ with body:
 #Main chat
     if job_summary!='':
         st.write(job_summary)
-    st.subheader("Ask me anything here!",divider='rainbow')
+    st.subheader("Let's chat! Ask me anything!",divider='rainbow')
 
 if "messages" not in st.session_state:
     #st.session_state.table=update_knowledge()
@@ -50,6 +50,7 @@ if prompt := st.chat_input("Ask me some interview questions..."):
         st.session_state.messages.append(
             {"role": "assistant", "content":response})
        
+
 
 
 
