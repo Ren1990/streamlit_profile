@@ -6,7 +6,7 @@ margin_r,body,margin_l = st.columns([0.1, 3, 0.1])
 
 with body:
     menu()
-    st.header("🤖 GenAI Agent",divider='rainbow')     
+    st.header("🤖 GenAI Agent: Paste Your JD and Ask Me Anything!",divider='rainbow')     
     job_summary=''
     job_description=st.text_area(
         label="🤖: 'I am a Digital Twin of Ren Hwai, and I am ready for job interview!'",
@@ -50,3 +50,4 @@ if prompt := st.chat_input("Ask me some interview questions..."):
         st.session_state.messages.append(
             {"role": "assistant", "content":response})
        
+
